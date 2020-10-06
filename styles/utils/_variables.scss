@@ -1,0 +1,35 @@
+$primary-font: 'Inter', sans-serif;
+$font-ligth: 200;
+$font-regular: 400;
+$font-bold: 700;
+
+// Colores
+$palette: (
+    ligth-grey: #DCDDE1,
+    ultra-ligth-grey: #F5F6FA,
+    medium-grey: #bbbbbb,
+    brand-grey: #EFEFEF,
+    dark-grey: #EFEFEF,
+    brand-primary-color: #504f55, //#0a2240,
+    brand-secondary-color: #745BA9,
+    brand-tertiary-color: #F65851,
+    brand-complementary-color: #F2CC16,
+    brand-head-plantas: #e4e4e1,
+    brand-frm-plantas: #c3c0b7
+);
+$ligth-grey: map-get($palette,ligth-grey);
+$ultra-ligth-grey: map-get($palette,ultra-ligth-grey);
+$medium-grey: map-get($palette,medium-grey);
+$brand-grey: map-get($palette,brand-grey);
+$dark-grey: map-get($palette,dark-grey);
+$brand-primary-color: map-get($palette,brand-primary-color);
+$brand-secondary-color: map-get($palette,brand-secondary-color);
+$brand-tertiary-color: map-get($palette,brand-tertiary-color);
+$brand-complementary-color: map-get($palette,brand-complementary-color);
+$brand-frm-plantas: map-get($palette, brand-frm-plantas);
+$brand-head-plantas: map-get($palette, brand-head-plantas);
+$white:white;
+$black: black;
+//Gradientes
+// $gradient-yellow-green: linear-gradient(to right, $page-yellow, $brand-primary-color);
+// $gradient-red-yellow: linear-gradient(to right, $brand-red, $page-yellow);

@@ -1,0 +1,21 @@
+{
+  "name": "tavomak",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "next": "9.5.3",
+    "prismjs": "^1.21.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-fancybox": "^0.2.5",
+    "react-image-lightbox": "^5.1.1",
+    "sass": "^1.26.11",
+    "swr": "^0.3.5"
+  }
+}

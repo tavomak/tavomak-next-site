@@ -1,0 +1,46 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import 'components/dracula';
+@import '../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/media";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+@import "components/buttons";
+@import "components/hamburguer";
+
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  line-height: 1.2;
+  color: $brand-primary-color;
+  overflow-x: hidden;
+}
+
+a {
+  color: $brand-primary-color;
+  transition: .2s ease-in-out all;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: $brand-tertiary-color;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+strong, .font-bold {
+  font-weight: $font-bold;
+}

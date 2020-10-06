@@ -1,0 +1,14 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/functions";
+@import "../../styles/utils/media";
+.titleSection{
+    margin-bottom: 30px;
+    font-weight: 300;
+    &::after{
+        content: "";
+        display: block;
+        width: 200px;
+        height: 4px;
+        background: $brand-primary-color;
+    }
+  }

@@ -1,0 +1,30 @@
+.btn {
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: none;
+    font-size: 12px;
+    &-primary{
+        background: $black;
+        color: $white;
+        &:hover {
+            background: $brand-secondary-color;
+        }
+    }
+    &-secondary{
+        background: $brand-secondary-color;
+        //border-radius: 5px;
+        color: $white;
+        &:hover {
+            color: $black;
+            background: $ligth-grey;
+        }
+    }
+    &-tertiary {
+        //border-radius: 5px;
+        background: $ligth-grey;
+        &:hover {
+            color: $white;
+            background: $brand-secondary-color;
+        }
+    }
+}
