@@ -1,10 +1,22 @@
 import Layout from "../../components/Layout";
 import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
-const BehanceProject = ({project}) => {
-  //console.log(project.project)
-  const {name, modules} = project.project,
+
+const BehanceProject = ({posts, id}) => {
+  
+  const fetcher = x => fetch(`https://api.behance.net//v2/projects/${id}?client_id=yR0kreJuPSelu18eSP0i5SCh1nzH1FUP`,
+  { mode: 'no-cors'}
+  ).then(res => res.json())
+
+  const { data } = useSWR(id , fetcher, { initialData: posts })
+
+  console.log(data)
+
+  const {name, modules} = data.project,
   soloImagenes = modules.filter(img => (typeof(img.sizes)) ? img.sizes : img.src )
+
+
   return (
     <Layout
       className="container"
@@ -29,23 +41,19 @@ export async function getStaticProps({ params }) {
   const {
     id,
   } = params
-  const res = await fetch(
-    `https://api.behance.net//v2/projects/${id}?client_id=yR0kreJuPSelu18eSP0i5SCh1nzH1FUP`
-    );
-    const project = await res.json();
-  return {
-    props: {
-      project,
-      id
-    },
-  };
-}
-
-export function getStaticPaths() {
-    const allPosts = [1,2,3]
   
-    return {
-      paths: [],
-      fallback: true,
-    }
+  const fetcher = x => fetch(`https://api.behance.net//v2/projects/${id}?client_id=yR0kreJuPSelu18eSP0i5SCh1nzH1FUP`,
+  { mode: 'no-cors'}
+  ).then(res => res.json())
+  
+  const posts = await fetcher(`https://api.behance.net//v2/projects/${id}?client_id=yR0kreJuPSelu18eSP0i5SCh1nzH1FUP`)
+  return { props: { posts, id } }
+}
+export function getStaticPaths() {
+  const allPosts = [1,2,3]
+
+  return {
+    paths: [],
+    fallback: true,
   }
+}
