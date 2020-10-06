@@ -36,7 +36,7 @@ NPM run build
 
 ## Versionado 📌
 
-Usamos [Git](http://semver.org/) para el versionado. Para todas las versiones disponibles, el [Repositorio](https://github.com/tavomak).
+Usamos [Git](http://semver.org/) para el versionado. Para todas las versiones disponibles, el [Repositorio](https://github.com/tu/proyecto).
 
 ## Autores ✒️
 
