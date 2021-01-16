@@ -17,14 +17,19 @@ export default function Index({ posts }) {
           </div>
       </div>
       <ul className="row">
-        {projects.map((post, i) => (
-          
-          <ProjectCard 
-            post={post}
-            key={i}
-            id={post.id}
-          />
-        ))}
+        {
+          projects.length
+            ? projects.map((post, i) => (
+            
+              <ProjectCard 
+                post={post}
+                key={i}
+                id={post.id}
+              />
+          ))
+          :
+          <p>Cargando</p>
+        }
       </ul>
     </Layout>
   );
@@ -35,6 +40,7 @@ export async function getStaticProps() {
     "https://api.behance.net/v2/users/raskatafat/projects?client_id=yR0kreJuPSelu18eSP0i5SCh1nzH1FUP"
   );
   const posts = await res.json();
+  //console.log(posts);
   return {
     props: {
       posts,

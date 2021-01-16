@@ -6,7 +6,7 @@ const ProjectCard = ({ post }) => {
       <div className="card shadow mb-md-4">
         <div className="card-body d-flex flex-column justify-content-between">
           <img src={covers["404"]} className="w-100" />
-          {/* <p className="py-2">{name}</p> */}
+          <p className="py-2">{name}</p> 
           <div className="text-right mt-5">
             <Link as={`/behance-project/${id}`} href="/behance-project/[id]">
               <a className="btn btn-primary">Ver proyecto</a>
