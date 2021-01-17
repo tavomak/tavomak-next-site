@@ -21,6 +21,8 @@ jobs:
         npm run build
       env:
         WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
+    - name: List output files
+      run: find build/ -print
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
