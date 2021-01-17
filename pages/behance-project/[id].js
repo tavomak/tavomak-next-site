@@ -4,7 +4,7 @@ const BehanceProject = ({ post }) => {
   const { modules } = post.project
 
   //console.log(post);
-  console.log(modules);
+  //.log(modules);
   const soloImagenes = modules.filter(img => (typeof(img.sizes)) ? img.sizes : img.src )
 
   return (
