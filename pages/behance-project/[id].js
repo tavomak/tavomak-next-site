@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
     ).then((res) => res.json());
 
   const post = await fetcher();
-  return { props: { post } };
+  return { props: { post }, revalidate: 1, };
 }
 
 export default BehanceProject;
