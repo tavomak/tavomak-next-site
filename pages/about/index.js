@@ -5,6 +5,7 @@ const About = () => {
     return ( 
         <Layout
             className="container"
+            title="Diseñador y desarrollador frontend"
         > 
             <div className="row" className="my-2">
                 <img src="/about.jpg" alt="" className="w-100"/>

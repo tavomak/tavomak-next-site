@@ -22,7 +22,7 @@ export default function Home({ allPosts: { edges }, preview }) {
       </div>
     </Layout> }*/
   return (
-    <About></About>
+    <About />
   )
 }
 
